@@ -1,0 +1,75 @@
+<?xml	version="1.0"	encoding="UTF-8"?>
+<wsdl:definitions	targetNamespace="urn:sample.spring"
+	name="WeatherSpringService"	xmlns:sample="urn:sample.spring"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:documentation>
+		This	WSDL	contains	the	Billing,	Invoice	and	Release	Services
+	</wsdl:documentation>
+	<wsdl:types>
+		<xsd:schema	elementFormDefault="qualified"	targetNamespace="urn:sample.spring">
+			<xsd:import
+				namespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+				schemaLocation="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"	/>
+			<xsd:complexType name="Weather">
+				<xsd:sequence>
+					<xsd:element name="temperature" type="xsd:float" />
+					<xsd:element name="forecast" type="xsd:string" />
+					<xsd:element name="rain" type="xsd:boolean" />
+					<xsd:element name="howMuchRain" type="xsd:float" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="getWeather">
+				<xsd:complexType>
+					<xsd:sequence>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getWeatherResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="weather" type="sample:Weather"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+
+    <wsdl:message name="getWeatherRequest">
+	    <wsdl:part name="parameters" element="sample:getWeather"></wsdl:part>
+    </wsdl:message>
+	<wsdl:message name="getWeatherResponse">
+		<wsdl:part name="parameters" element="sample:getWeatherResponse"></wsdl:part>
+	</wsdl:message>
+    
+    <wsdl:portType name="WeatherSpringPortType">
+		<wsdl:operation name="getWeather">
+			<wsdl:input message="sample:getWeatherRequest" />
+			<wsdl:output message="sample:getWeatherResponse" />
+		</wsdl:operation>
+    </wsdl:portType>
+	
+	<wsdl:binding name="WeatherSpringSoapBinding" type="sample:WeatherSpringPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="getWeather">
+			<soap:operation soapAction="urn:sample.spring/getWeather" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="WeatherSpringService">
+		<wsdl:documentation>
+			This service implements all ROI Billing, Invoice, Release Service Calls
+		</wsdl:documentation>
+		<wsdl:port binding="sample:WeatherSpringSoapBinding" name="WeatherSpringPort">
+			<soap:address location="http://localhost:8080/axis-2-poc/services/WeatherSpringService" />
+			<!--<soap:address location="http://localhost:8080/services/WeatherSpringService" />-->
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
