@@ -1,6 +1,6 @@
 <?xml	version="1.0"	encoding="UTF-8"?>
 <wsdl:definitions	targetNamespace="urn:sample.spring"
-	name="WeatherSpringService"	xmlns:sample="urn:sample.spring"
+	name="WeatherService"	xmlns:sample="urn:sample.spring"
 	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -63,7 +63,7 @@
 		</wsdl:operation>
 	</wsdl:binding>
 
-	<wsdl:service name="WeatherSpringService">
+	<wsdl:service name="WeatherService">
 		<wsdl:documentation>
 			This service implements all ROI Billing, Invoice, Release Service Calls
 		</wsdl:documentation>

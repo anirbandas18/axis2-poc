@@ -26,22 +26,23 @@
             <artifactId>axis2</artifactId>
             <version>1.6.2.wso2v13</version>
         </dependency>-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.axis2</groupId>
             <artifactId>axis2</artifactId>
             <version>1.7.9</version>
             <type>pom</type>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.apache.axis2</groupId>
             <artifactId>axis2-adb</artifactId>
             <version>1.7.9</version>
-        </dependency><dependency>
+        </dependency>
+<!--        <dependency>
             <groupId>org.apache.axis2</groupId>
             <artifactId>axis2-kernel</artifactId>
             <version>1.7.9</version>
-        </dependency>
-        <dependency>
+        </dependency>-->
+<!--        <dependency>
             <groupId>org.apache.axis2</groupId>
             <artifactId>axis2-clustering</artifactId>
             <version>1.7.9</version>
@@ -75,13 +76,13 @@
             <groupId>org.apache.axis2</groupId>
             <artifactId>axis2-metadata</artifactId>
             <version>1.7.9</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.apache.axis2</groupId>
             <artifactId>axis2-spring</artifactId>
             <version>1.7.9</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.axis2</groupId>
             <artifactId>axis2-java2wsdl</artifactId>
             <version>1.7.9</version>
@@ -100,13 +101,25 @@
             <groupId>org.apache.axis2</groupId>
             <artifactId>axis2-transport-local</artifactId>
             <version>1.7.9</version>
+        </dependency>-->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.14.1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.axis2/axis2-jaxws -->
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-jaxws</artifactId>
+            <version>1.7.9</version>
+        </dependency>
+
         <!--<dependency>
             <groupId>org.apache.neethi.wso2</groupId>
             <artifactId>neethi</artifactId>
             <version>2.0.4.wso2v4</version>
         </dependency>-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.xmlbeans</groupId>
             <artifactId>xmlbeans</artifactId>
             <version>5.0.1</version>
@@ -115,7 +128,7 @@
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.framework</artifactId>
             <version>7.0.1</version>
-        </dependency>
+        </dependency>-->
         <!--<dependency>
             <groupId>org.apache.axis2</groupId>
             <artifactId>mex</artifactId>

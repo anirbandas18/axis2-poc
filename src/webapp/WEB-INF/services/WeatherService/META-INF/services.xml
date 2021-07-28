@@ -29,7 +29,7 @@
       <messageReceiver class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver"/>
     </operation>
   </service>
-  <service name="WeatherSpringService">
+  <service name="WeatherService">
     <description>
       Weather Spring POJO Axis2 AAR deployment
     </description>

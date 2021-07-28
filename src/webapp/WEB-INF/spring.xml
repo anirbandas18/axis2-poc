@@ -25,11 +25,11 @@
 	<bean id="applicationContext"
 		  class="org.apache.axis2.extensions.spring.receivers.ApplicationContextHolder" />
 
-	<bean id="WeatherSpringService" class="sample.spring.service.WeatherSpringService">
-		<property name="weather" ref="WeatherBean"/>
+	<bean id="weatherSpringService" class="sample.spring.service.WeatherSpringService">
+		<property name="weather" ref="weatherBean"/>
 	</bean>
 
-	<bean id="WeatherBean" class="sample.spring.bean.Weather">
+	<bean id="weatherBean" class="sample.spring.bean.Weather">
 		<property name="temperature" value="89.9"/>
 		<property name="forecast" value="Sunny"/>
 		<property name="rain" value="false"/>
