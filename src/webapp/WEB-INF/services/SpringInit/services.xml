@@ -1,0 +1,11 @@
+<service name="SpringInit" class="sample.spring.service.SpringInit">
+  <description>
+    This web service initializes Spring.
+  </description>
+  <parameter name="ServiceClass" >sample.spring.service.SpringInit</parameter>
+  <parameter name="ServiceTCCL" >composite</parameter>
+  <parameter name="load-on-startup" >true</parameter>
+  <operation name="springInit">
+    <messageReceiver class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver"/>
+  </operation>
+</service>
