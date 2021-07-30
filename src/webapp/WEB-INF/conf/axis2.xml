@@ -72,7 +72,7 @@
 
     <!--Following params will set the proper context paths for invocations. All the endpoints will have a commons context-->
     <!--root which can configured using the following contextRoot parameter-->
-    <!--<parameter name="contextRoot">axis-2-poc</parameter>-->
+    <parameter name="contextRoot">axis-2-poc</parameter>
 
     <!--Our HTTP endpoints can handle both REST and SOAP. Following parameters can be used to distinguiush those endpoints-->
     <!--In case of a servlet, if you change this you have to manually change the settings of your servlet container to map this -->
@@ -106,11 +106,11 @@
     <!--    </listener>-->
     
     <!-- Uncomment if JAX-WS 2.1 support is needed. -->
-    <!--
+
     <threadContextMigrators>
         <threadContextMigrator listId="JAXWS-ThreadContextMigrator-List" class="org.apache.axis2.jaxws.addressing.migrator.EndpointContextMapMigrator"/>
     </threadContextMigrators>
-    -->
+
 
     <!-- ================================================= -->
     <!-- Message Receivers -->

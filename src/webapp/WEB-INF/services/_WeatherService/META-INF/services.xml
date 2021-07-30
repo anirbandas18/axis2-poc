@@ -35,7 +35,7 @@
     </description>
     <parameter name="ServiceClass" >sample.spring.service.WeatherSpringService</parameter>
     <parameter name="ServiceObjectSupplier" >org.apache.axis2.extensions.spring.receivers.SpringAppContextAwareObjectSupplier</parameter>
-    <parameter name="SpringBeanName" >weatherSpringService</parameter>
+    <parameter name="SpringBeanName" >weatherService</parameter>
     <messageReceivers>
       <messageReceiver mep="http://www.w3.org/ns/wsdl/in-only"
                        class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
